@@ -1,3 +1,5 @@
+package ej.empleados;
+
 import java.util.Scanner;
 
 public class Funcion {
