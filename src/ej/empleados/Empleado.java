@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.Period;
 
 public class Empleado {
-
+    long IdEmpleado;
     String nombre;
     String apellido;
     String dni;
@@ -13,6 +13,9 @@ public class Empleado {
     boolean presentismo;
     int nroTel;
     String domicilio;
+
+    static String empresa = "Unitan";
+    static long siguienteId = 0;
 
     public static final String dom_def = "sin domicilio";
 
@@ -37,6 +40,7 @@ public class Empleado {
         this.presentismo = presentismo;
         this.nroTel = nroTel;
         this.domicilio = domicilio;
+        this.IdEmpleado = siguienteId++;
     }
 
     @Override
@@ -85,6 +89,10 @@ public class Empleado {
 
     public double getSueldoBasico() {
         return sueldoBasico;
+    }
+
+    public String getDni() {
+        return dni;
     }
 
     public void setSueldoBasico(double sueldoBasico) {
